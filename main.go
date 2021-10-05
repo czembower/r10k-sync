@@ -3,6 +3,7 @@
 // a CI pipeline should be used to push messages to a redis queue
 // handler listens for messages from configured redis cluster that contain the changed puppet environment name as a string
 // deploys code from the configured repository to the puppet environment using r10k
+// k8s readiness probe should be configured to be healthy based on existence of local file "/root/.puppet-redis-ok"
 
 package main
 
